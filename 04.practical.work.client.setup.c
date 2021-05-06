@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
 	if (sockfd < 0) {
 		printf("Error: Creating socket failed\n");
-        return -1;
+		return -1;
 	}
 
 	if (argc < 2) {
@@ -30,8 +30,8 @@ int main(int argc, char const *argv[])
 		host = gethostbyname(argv[1]);
 	}
 
-	unsigned int i=0;
 	
+	unsigned int i=0;	
 	while (host->h_addr_list[i] != NULL) {
 		printf( "%s\n", inet_ntoa( *(struct in_addr*)(host->h_addr_list[i])));
 		i++;
