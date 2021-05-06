@@ -22,9 +22,9 @@ int main(int argc, char const *argv[])
 
 	if (argc < 2) {
 		char str[100];
-    	printf("Input hostname u want to find ip addresses: ");
-    	scanf("%s", str);
-    	host = gethostbyname(str);
+		printf("Input hostname u want to find ip addresses: ");
+		scanf("%s", str);
+		host = gethostbyname(str);
 	}
 	else {
 		host = gethostbyname(argv[1]);
