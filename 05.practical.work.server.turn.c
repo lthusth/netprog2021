@@ -8,17 +8,17 @@
 
 int main(int argc, char const *argv[])
 {
-	int clen, clientfd, sockfd;
-	struct sockaddr_in saddr, caddr;
-	unsigned short port = 8784;
+    int clen, clientfd, sockfd;
+    struct sockaddr_in saddr, caddr;
+    unsigned short port = 8784;
 
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
-	if (sockfd < 0) {
-		printf("Error: Creating socket failed\n");
+    if (sockfd < 0) {
+        printf("Error: Creating socket failed\n");
         return -1;
-	}
-	
-	memset(&saddr, 0, sizeof(saddr));
+    }
+    
+    memset(&saddr, 0, sizeof(saddr));
     saddr.sin_family = AF_INET;
     saddr.sin_addr.s_addr = htonl(INADDR_ANY);
     saddr.sin_port = htons(port);
@@ -70,3 +70,4 @@ int main(int argc, char const *argv[])
     return 0;
 
 }
+
