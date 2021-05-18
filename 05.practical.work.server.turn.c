@@ -62,9 +62,8 @@ int main(int argc, char const *argv[])
 		{
 			printf("server exit...\n");
 			break;
-			}
 		}
-
+	}
 	return 0;
 
 }
