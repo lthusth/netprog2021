@@ -14,7 +14,6 @@ int main(int argc, char const *argv[])
 	struct hostent *host;
 	unsigned short port = 8784;
 	
-
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
 	if (sockfd < 0) {
 		printf("Error: Creating socket failed\n");
@@ -27,6 +26,7 @@ int main(int argc, char const *argv[])
 		scanf("%s", str);
 		host = gethostbyname(str);
 	}
+
 	else {
 		host = gethostbyname(argv[1]);
 	}
@@ -63,7 +63,8 @@ int main(int argc, char const *argv[])
 		recv(sockfd, mess, sizeof(mess), 0);
 		printf("%s\n", mess);
 
-		if (strncmp("exit", mess, 4) == 0){
+		if (strncmp("exit", mess, 4) == 0)
+		{
             printf("client exit...\n");
             break;
             }
