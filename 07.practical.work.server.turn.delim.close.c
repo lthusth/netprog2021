@@ -84,12 +84,6 @@ int main(int argc, char const *argv[])
 			shutdown(sockfd, 2);
 			exit(0);
 		}
-		if (strncmp("quit", mess, 4) == 0);
-		{
-			printf("Closing socket...\n");	
-			close(sockfd);
-			break;
-		}
 	}
 	return 0;
 }
